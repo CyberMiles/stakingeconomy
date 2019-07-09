@@ -1,0 +1,322 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  height: 100%;
+  overflow-x: hidden;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+  width: 100%;
+}
+a {
+  color: #0057e7;
+  text-decoration: none;
+}
+a:hover a:focus a:active {
+  outline: none;
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "SFUIText sans-serif";
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hide {
+  display: none;
+}
+.wallet-down-container a:hover {
+  text-decoration: none;
+}
+.wallet-down-container .download a {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.wallet-down-container .download .google {
+  background-image: url('../../images/google.png');
+}
+.wallet-down-container .download .apple {
+  background-image: url('../../images/apple.png');
+}
+.wallet-down-container header {
+  background: url('../../images//header_bg.png'), -webkit-gradient(linear, left top, right top, from(#273fe8), color-stop(67%, #8663ea), to(#c96be1));
+  background: url('../../images//header_bg.png'), -webkit-linear-gradient(left, #273fe8, #8663ea 67%, #c96be1);
+  background: url('../../images//header_bg.png'), linear-gradient(to right, #273fe8, #8663ea 67%, #c96be1);
+  color: #fff;
+  font-size: 17px;
+  background-position: right center, left;
+  background-size: contain, contain;
+  background-repeat: no-repeat, no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.wallet-down-container header .container {
+  position: relative;
+}
+.wallet-down-container header .logo {
+  height: 104px;
+  margin: 64px 0 54px;
+}
+.wallet-down-container header .side {
+  width: 306px;
+  height: 487px;
+  background-image: url('../../images/header_phone.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 30px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.wallet-down-container header .main {
+  width: 100%;
+  padding-right: 330px;
+  padding-bottom: 120px;
+}
+.wallet-down-container header .main h3 {
+  font-size: 35px;
+  line-height: 48px;
+}
+.wallet-down-container header .main p {
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 300;
+}
+.wallet-down-container header .main .download {
+  margin-top: 34px;
+}
+.wallet-down-container header .main .download a {
+  height: 63px;
+  width: 222px;
+}
+.wallet-down-container section {
+  padding: 60px 0;
+}
+.wallet-down-container section.bg-gray {
+  background-color: #fafafa;
+}
+.wallet-down-container section.economy {
+  padding: 37px 0 90px;
+}
+.wallet-down-container section .title {
+  font-size: 38px;
+  line-height: 36px;
+  font-weight: 600;
+  color: #191919;
+  margin-bottom: 30px;
+}
+.wallet-down-container section p {
+  font-size: 22px;
+  line-height: 29px;
+  color: #666;
+}
+.wallet-down-container section .info {
+  color: #191919;
+  margin-bottom: 50px;
+  padding-right: 20px;
+}
+.wallet-down-container section .info a {
+  font-weight: 600;
+}
+.wallet-down-container section .download {
+  margin-top: 27px;
+  margin-bottom: 40px;
+  position: relative;
+  top: -20px;
+}
+.wallet-down-container section .download a {
+  height: 50px;
+  width: 192px;
+}
+.wallet-down-container section .buy-btn {
+  border-radius: 24px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#273fe8), color-stop(67%, #8663ea), to(#c96be1));
+  background-image: -webkit-linear-gradient(left, #273fe8, #8663ea 67%, #c96be1);
+  background-image: linear-gradient(to right, #273fe8, #8663ea 67%, #c96be1);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 9px 18px;
+  color: #fff;
+  margin-top: -25px;
+  margin-bottom: 29px;
+}
+.wallet-down-container section .icon-group {
+  margin-bottom: 20px;
+}
+.wallet-down-container section .icon-group a {
+  display: block;
+  height: 35px;
+  width: 200px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.wallet-down-container section .icon-group a.binance {
+  background-image: url('../../images//binance.png');
+}
+.wallet-down-container section .icon-group a.okex {
+  background-image: url('../../images/okex.png');
+}
+.wallet-down-container section .icon-group a.huobi {
+  background-image: url('../../images/huobi.png');
+}
+.wallet-down-container section .icon-group a.bithumb {
+  background-image: url('../../images/bithumb.png');
+}
+.wallet-down-container section table {
+  text-align: right;
+  border: 1px solid #e5e5e5;
+  font-size: 17px;
+  color: #666;
+  margin-top: 35px;
+}
+.wallet-down-container section table th:nth-child(2) {
+  text-align: left;
+}
+.wallet-down-container section table td:first-child {
+  min-width: 90px;
+  text-align: center;
+}
+.wallet-down-container section table td:nth-child(2) {
+  text-align: left;
+}
+.wallet-down-container section table th,
+.wallet-down-container section table tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+.wallet-down-container section table tr.cmt {
+  font-size: 20px;
+  color: #191919;
+  font-weight: 600;
+}
+.wallet-down-container section table tr.cmt td {
+  padding: 20px 8px;
+}
+.wallet-down-container section table td,
+.wallet-down-container section table th {
+  padding: 8px;
+  border: none;
+}
+.wallet-down-container section table caption {
+  font-size: 15px;
+  text-align: right;
+}
+.wallet-down-container section.stakecCmt {
+  padding: 60px 0 0;
+}
+.wallet-down-container section.stakecCmt .block-left {
+  width: 50%;
+  margin-bottom: 150px;
+}
+.wallet-down-container section.stakecCmt .block-right {
+  width: 50%;
+  background-image: url('../../images/footer_phone.png');
+  background-size: 400px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+.wallet-down-container section.stakecCmt .play {
+  background-image: url('../../images/play.png');
+  background-repeat: no-repeat;
+  background-size: 99px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  margin-left: -50px;
+}
+.wallet-down-container section.stakeInfo .desc {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.wallet-down-container section.contact {
+  background-image: url('../../images/footer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+}
+.wallet-down-container section.contact p {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.wallet-down-container section.contact .email {
+  margin-top: 40px;
+}
+.wallet-down-container footer {
+  padding: 60px 0;
+  background-color: #fafafa;
+  font-size: 14px;
+  overflow: hidden;
+}
+.wallet-down-container footer .logo {
+  width: 144px;
+  height: 30px;
+  display: block;
+  background-image: url('../../images/logo2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wallet-down-container footer .row-list {
+  margin-left: 100px;
+}
+.wallet-down-container footer .row-list a {
+  display: block;
+  color: #666;
+  margin-top: 13px;
+}
+.wallet-down-container footer .row-list a:hover {
+  text-decoration: none;
+}
+.wallet-down-container footer .row-list .name {
+  display: block;
+  font-size: 16px;
+  color: #191919;
+  font-weight: 500;
+}
+.wallet-down-container footer .row-list .copyright {
+  color: #999;
+  font-size: 12px;
+  margin-top: 46px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 438px;
+  }
+}
