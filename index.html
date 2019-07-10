@@ -21,7 +21,10 @@
                 <div class="main">
                     <a href="https://cybermiles.io/" target="_blank"><img class="logo" src="./images/logo.png"></a>
 
-                    <h3 class="title">Invest in CMTs to Earn More!<br>The return on CMT investment <br>could be 1000x. <br>CMT is Bitcoin meets Amazon.</h3>
+                    <h3 class="title">CMT is where Bitcoin meets Amazon.</h3>
+                    <h4 class="title-2">Convert your BTCs into CMTs to Get More Income!<br>The annual return of CMT staking can be up to 20%.</h4>
+                    <p class="title-3">Stake 1,000,000 CMTs (4.28 BTC) via the CyberMiles App, then get the additional award of up to 200,000CMTs (0.856 BTC).</p>
+                    <p class="title-4">Download the free mobile app to stake your CMTs.</p>
                     <div class="download">
                         <a href="https://play.google.com/store/apps/details?id=io.cybermiles.cmtwallet" class="google" target="_blank" onClick="gaSend('top_android', 'install')"></a>
                         <a href="https://itunes.apple.com/us/app/id1418378426" class="apple" target="_blank" onClick="gaSend('top_ios', 'install')"></a>
@@ -33,6 +36,23 @@
 
         <section class="amazon">
             <div class="container">
+                <div class="calculator">
+                    <div class="name">Estimated Reward Calculator</div>
+                    <input id="calculator" type="text" placeholder="Estimated Reward Calculator">
+                    <div class="result" style="display: none;">
+                        <p>Estimated monthly CMT Award: <span class="cmtAward"></span> CMTs ≈<span id="month"></span> BTC</p>
+                        <p>Estimated annual CMT Award: <span class="cmtAward"></span> CMTs ≈<span id="mannual"></span> BTC</p>
+                        <img class="close" src="./images/close.png">
+                    </div>
+                </div>
+
+                <div class="search-block">
+                    <a href="https://www.binance.com/en/trade/CMT_BTC" target="_blank"><img src="./images/bian_search.png" alt=""></a>
+                    <a href="https://www.okex.com/market?product=cmt_btc" target="_blank"><img src="./images/okex_search.png" alt=""></a>
+                    <a href="https://www.hbg.com/en-us/exchange/cmt_btc/" target="_blank"><img src="./images/huobi_search.png" alt=""></a>
+                    <a href="https://www.bithumb.com/trade/order/CMT" target="_blank"><img src="./images/bithumb_search.png" alt=""></a>
+                </div>
+
                 <div class="title">Why CMTs?</div>
                 <p>CyberMiles (CMT) is world's No.1 blockchain platform for e-commerce. It is the next generation e-commerce platform that returns control and profits back to individuals. As the network token that powers all activities on the CyberMiles public blockchain, CMT is Bitcoin meets Amazon.</p>
                 <p>Like Bitcoin and Amazon stock in the past 10 years, CMT value could see explosive growth of 1000x in the next revolution of e-commerce. Hold CMTs now to be part of the future! Furthermore, holding CMTs could earn you an additional 20% annual ROI. Read more below.</p>
@@ -41,17 +61,8 @@
             </div>
         </section>
 
-        <!-- Economy -->
-        <section class="bg-gray economy">
-            <div class="container">
-                <div class="title">What is Staking Economy?</div>
-                <p>Staking is an economic incentive cryptocurrency projects provide for token holders to participate in community governance and security. Users stake (or lock) tokens to “vote” for representatives (eg super nodes) that govern the blockchain ecosystem.</p>
-                <p>In exchange, the users receive tokens as compensation for the stakes. Staking creates incentives for token holders to vote honestly and carefully for the best of the community. </p>
-            </div>
-        </section>
-
         <!-- table -->
-        <section class="table-show">
+        <section class="bg-gray table-show">
             <div class="container">
                 <div class="title">CMT May Be The Best Choice For Staking</div>
                 <p>Though there are so many projects support staking</p>
@@ -170,11 +181,20 @@
                     </table>
                 </div>
 
-                <div class="chart-title hide">CyberMiles Charts</div>
+                <div class="chart-title">CMT Price:</div>
 
                 <img src="./images/chart.png" alt="">
 
                 <p class="chart-desc">*Data from CoinMarketcap on 4th July, 2019</p>
+            </div>
+        </section>
+
+        <!-- Economy -->
+        <section class="economy">
+            <div class="container">
+                <div class="title">What is Staking Economy?</div>
+                <p>Staking is an economic incentive cryptocurrency projects provide for token holders to participate in community governance and security. Users stake (or lock) tokens to “vote” for representatives (eg super nodes) that govern the blockchain ecosystem.</p>
+                <p>In exchange, the users receive tokens as compensation for the stakes. Staking creates incentives for token holders to vote honestly and carefully for the best of the community. </p>
             </div>
         </section>
 
@@ -209,10 +229,12 @@
             <div class="container flex">
                 <div class="block-left">
                     <div class="title">How To Stake CMTs In <br>CyberMiles App</div>
-                    <p>1. Create your own CMT address</p>
-                    <p>2. Back up the mnemonic words</p>
-                    <p>3. Stake your CMTs to one Validator</p>
-                    <p>4. Receive your awards per day</p>
+                    <ol>
+                        <li><p>Download the CyberMiles App and create your own CMT address</p></li>
+                        <li><p>Deposit CMTs to your CMT address</p></li>
+                        <li><p>Stake your CMTs to one Validator and receive your awards everyday</p></li>
+                        <li><p>Minimum staking amount is 1,000 CMTs.</p></li>
+                    </ol>
                 </div>
                 <div class="block-right">
                     <div class="btn play" data-toggle="modal" data-target=".youtub"></div>
@@ -220,7 +242,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="bg-gray contact hide">
             <div class="container">
                 <p>CyberMiles (CMT) is world's No.1 blockchain platform for e-commerce.</p>
                 <p>The current market cap of Amzon is 954.63B, while CyberMiles' is $58,509,942 USD.</p>
@@ -229,12 +251,34 @@
             </div>
         </section>
 
+        <section class="bg-gray partner">
+            <div class="container">
+                <div class="title">Partners And Validators</div>
+                <div class="img-container">
+                    <a target="_blank"><img src="./images/5-miles.png" alt=""></a>
+                    <a target="_blank"><img src="./images/huobipool.png" alt=""></a>
+                    <a target="_blank"><img src="./images/hash-quark.png" alt=""></a>
+                    <a target="_blank"><img src="./images/hayek-capital.png" alt=""></a>
+                    <a target="_blank"><img src="./images/cobo-wallet@2x.png" alt=""></a>
+                </div>
+                <div class="title">Investors</div>
+                <div class="img-container">
+                    <a target="_blank"><img src="./images/sig.png" alt=""></a>
+                    <a target="_blank"><img src="./images/idg.png" alt=""></a>
+                    <a target="_blank"><img src="./images/morning-side.png" alt=""></a>
+                    <a target="_blank"><img src="./images/bluelake.png" alt=""></a>
+                    <a target="_blank"><img src="./images/link-vc.png" alt=""></a>
+                    <a target="_blank"><img src="./images/colin-star.png" alt=""></a>
+                </div>
+            </div>
+        </section>
+
         <footer>
             <div class="container">
                 <a href="https://cybermiles.io/" class="logo float-left"></a>
                 <div class="follow row-list float-left">
                     <span class="name">Follow Us</span>
-                    <a href="https://twitter.com/cybermiles" target="_blank" onClick="gaSend('index', 'twiiter_footer')">Twiiter</a>
+                    <a href="https://twitter.com/cybermiles" target="_blank" onClick="gaSend('index', 'twiiter_footer')">Twitter</a>
                     <a href="https://www.facebook.com/cybermiles" target="_blank" onClick="gaSend('index', 'facebook_footer')">Facebook</a>
                     <a href="https://t.me/cybermilestoken" target="_blank" onClick="gaSend('index', 'tele_footer')">Telegram</a>
                 </div>
@@ -271,14 +315,13 @@
     <!-- CMT_SCRIPTS END -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120065893-17"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120065893-19"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-120065893-17');
-
+        gtag('config', 'UA-120065893-19');
         var gaSend = function(action, category) {
             typeof gtag !== 'undefined' && gtag('event', action, {event_category: category})
         }
@@ -337,14 +380,42 @@
             player && player.stopVideo && player.stopVideo();
         }
 
-        $('.youtub').on('hidden.bs.modal', function (e) {
-            stopVideo()
-        })
+        $(function() {
+            // $('.result').css('bottom', -($('.result').height() + 80))
+            $('.youtub').on('hidden.bs.modal', function (e) {
+                stopVideo()
+            })
 
-        $('.youtub').on('show.bs.modal', function (e) {
-            player && player.playVideo && player.playVideo();
-        })
+            $('.youtub').on('show.bs.modal', function (e) {
+                player && player.playVideo && player.playVideo();
+            })
 
+            $('#calculator').on('keyup focus', function(e) {
+                var val = $(e.target).val() || 0
+                var cmt = parseInt(val) > 0 ? parseInt(val) : 0
+                var currency = 0.00000428
+                var mannual = cmt * 0.2 * 0.00000428
+                var month = mannual / 12
+
+                if (cmt !== val) $(this).val(cmt)
+                $('.cmtAward').text(cmt)
+                $('#month').text(month.toFixed(6))
+                $('#mannual').text(mannual.toFixed(6))
+                $('.calculator .result').show()
+                $('.result').css('bottom', -($('.result').height() + 80))
+            })
+
+            $('.close').click(function() {
+                $('.calculator .result').hide()
+            })
+
+            if ($('body').width() > 480) {
+                $(window).scroll(function(event){
+                    $('.calculator .result').hide()
+                    $('#calculator').blur()
+                })
+            }
+        })
     </script>
 </body>
 </html>
