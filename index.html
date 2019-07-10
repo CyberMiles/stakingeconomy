@@ -47,10 +47,10 @@
                 </div>
 
                 <div class="search-block">
-                    <a href="https://www.binance.com/en/trade/CMT_BTC" target="_blank"><img src="./images/bian_search.png" alt=""></a>
-                    <a href="https://www.okex.com/market?product=cmt_btc" target="_blank"><img src="./images/okex_search.png" alt=""></a>
-                    <a href="https://www.hbg.com/en-us/exchange/cmt_btc/" target="_blank"><img src="./images/huobi_search.png" alt=""></a>
-                    <a href="https://www.bithumb.com/trade/order/CMT" target="_blank"><img src="./images/bithumb_search.png" alt=""></a>
+                    <a href="https://www.binance.com/en/trade/CMT_BTC" target="_blank" onClick="gaSend('binance', 'exchange')"><img src="./images/bian_search.png" alt=""></a>
+                    <a href="https://www.okex.com/market?product=cmt_btc" target="_blank" onClick="gaSend('okex', 'exchange')"><img src="./images/okex_search.png" alt=""></a>
+                    <a href="https://www.hbg.com/en-us/exchange/cmt_btc/" target="_blank" onClick="gaSend('huobi', 'exchange')"><img src="./images/huobi_search.png" alt=""></a>
+                    <a href="https://www.bithumb.com/trade/order/CMT" target="_blank" onClick="gaSend('bithumb', 'exchange')"><img src="./images/bithumb_search.png" alt=""></a>
                 </div>
 
                 <div class="title">Why CMTs?</div>
@@ -211,7 +211,7 @@
                 </div>
 
                 <!-- <p class="info">02. You can buy CMTs via the Buy your CMTs DApp in CyberMiles App</p>
-                <div class="buy-btn btn">Buy Direct</div> -->
+                <div class="buy-btn btn" onClick="gaSend('open_dapp', 'buy_with_one_click')">Buy Direct</div> -->
 
                 <p class="info">02. Get your CMTs on the following exchanges!</p>
                 <div class="icon-group">
@@ -230,7 +230,7 @@
                 <div class="block-left">
                     <div class="title">How To Stake CMTs In <br>CyberMiles App</div>
                     <ol>
-                        <li><p>Download the CyberMiles App and create your own CMT address</p></li>
+                        <li><p><a href="https://app.cybermiles.io/" target="_blank">Download the CyberMiles App</a> and create your own CMT address</p></li>
                         <li><p>Deposit CMTs to your CMT address</p></li>
                         <li><p>Stake your CMTs to one Validator and receive your awards everyday</p></li>
                         <li><p>Minimum staking amount is 1,000 CMTs.</p></li>
@@ -403,6 +403,8 @@
                 $('#mannual').text(mannual.toFixed(6))
                 $('.calculator .result').show()
                 $('.result').css('bottom', -($('.result').height() + 80))
+
+                gaSend('click', 'return_calculator')
             })
 
             $('.close').click(function() {
