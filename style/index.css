@@ -51,7 +51,7 @@ a:hover a:focus a:active {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto, Open Sans, Segoe UI, sans-serif";
+  font-family: Roboto, Open Sans, Segoe UI, sans-serif;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -74,15 +74,15 @@ body {
   display: inline-block;
 }
 .wallet-down-container .download .google {
-  background-image: url('../../images/google.png');
+  background-image: url('../images/google.png');
 }
 .wallet-down-container .download .apple {
-  background-image: url('../../images/apple.png');
+  background-image: url('../images/apple.png');
 }
 .wallet-down-container header {
-  background: url('../../images/header_bg.png'), -webkit-gradient(linear, left top, right top, from(#273fe8), color-stop(67%, #8663ea), to(#c96be1));
-  background: url('../../images/header_bg.png'), -webkit-linear-gradient(left, #273fe8, #8663ea 67%, #c96be1);
-  background: url('../../images/header_bg.png'), linear-gradient(to right, #273fe8, #8663ea 67%, #c96be1);
+  background: url('../images/header_bg.png'), -webkit-gradient(linear, left top, right top, from(#273fe8), color-stop(67%, #8663ea), to(#c96be1));
+  background: url('../images/header_bg.png'), -webkit-linear-gradient(left, #273fe8, #8663ea 67%, #c96be1);
+  background: url('../images/header_bg.png'), linear-gradient(to right, #273fe8, #8663ea 67%, #c96be1);
   color: #fff;
   font-size: 17px;
   background-position: right center, center;
@@ -101,7 +101,7 @@ body {
 .wallet-down-container header .side {
   width: 306px;
   height: 487px;
-  background-image: url('../../images/header_phone.png');
+  background-image: url('../images/header_phone.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -206,16 +206,16 @@ body {
   background-position: center;
 }
 .wallet-down-container section .icon-group a.binance {
-  background-image: url('../../images/binance.png');
+  background-image: url('../images/binance.png');
 }
 .wallet-down-container section .icon-group a.okex {
-  background-image: url('../../images/okex.png');
+  background-image: url('../images/okex.png');
 }
 .wallet-down-container section .icon-group a.huobi {
-  background-image: url('../../images/huobi.png');
+  background-image: url('../images/huobi.png');
 }
 .wallet-down-container section .icon-group a.bithumb {
-  background-image: url('../../images/bithumb.png');
+  background-image: url('../images/bithumb.png');
 }
 .wallet-down-container section .table-block {
   width: 100%;
@@ -354,7 +354,7 @@ body {
 }
 .wallet-down-container section.stakecCmt .block-right {
   width: 50%;
-  background-image: url('../../images/footer_phone.png');
+  background-image: url('../images/footer_phone.png');
   background-size: 340px;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -362,7 +362,7 @@ body {
   display: inline-block;
 }
 .wallet-down-container section.stakecCmt .play {
-  background-image: url('../../images/play.png');
+  background-image: url('../images/play.png');
   background-repeat: no-repeat;
   background-size: 99px;
   width: 100px;
@@ -378,7 +378,7 @@ body {
   margin-bottom: 40px;
 }
 .wallet-down-container section.contact {
-  background-image: url('../../images/footer.png');
+  background-image: url('../images/footer.png');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 60px 0;
@@ -440,7 +440,7 @@ body {
   width: 144px;
   height: 30px;
   display: block;
-  background-image: url('../../images/logo2.png');
+  background-image: url('../images/logo2.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -542,18 +542,18 @@ body {
     margin: 25px 0;
   }
   .wallet-down-container header .main h3 {
-    font-size: 23px;
+    font-size: 27px;
     line-height: 30px;
   }
   .wallet-down-container header .main h4 {
-    font-size: 19px;
+    font-size: 22px;
     line-height: 33px;
   }
   .wallet-down-container header .main .title-4 {
     margin-top: 20px;
   }
   .wallet-down-container header .main p {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 30px;
   }
   .wallet-down-container header .main .download {
@@ -629,6 +629,10 @@ body {
   .wallet-down-container section .calculator .result {
     padding: 40px 20px;
     font-size: 22px;
+  }
+  .wallet-down-container section .calculator input {
+    min-width: auto;
+    width: 100%;
   }
   .wallet-down-container section.stakeInfo .desc {
     margin-bottom: 18px;

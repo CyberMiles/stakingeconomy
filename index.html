@@ -309,9 +309,9 @@
     </div>
 
     <!-- CMT_SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <!-- CMT_SCRIPTS END -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -380,6 +380,20 @@
             player && player.stopVideo && player.stopVideo();
         }
 
+        function accMul(arg1, arg2) {
+            var m = 0
+            var s1 = arg1.toString()
+            var s2 = arg2.toString()
+            try {
+                m += s1.split('.')[1].length
+            } catch (e) {}
+            try {
+                m += s2.split('.')[1].length
+            } catch (e) {}
+
+            return Number(s1.replace('.', '')) * Number(s2.replace('.', '')) / Math.pow(10, m)
+        }
+
         $(function() {
             // $('.result').css('bottom', -($('.result').height() + 80))
             $('.youtub').on('hidden.bs.modal', function (e) {
@@ -398,7 +412,7 @@
                 var month = mannual / 12
 
                 if (cmt !== val) $(this).val(cmt)
-                $('.cmtAward').text(cmt)
+                $('.cmtAward').text(accMul(cmt, 0.2))
                 $('#month').text(month.toFixed(6))
                 $('#mannual').text(mannual.toFixed(6))
                 $('.calculator .result').show()
@@ -409,14 +423,16 @@
 
             $('.close').click(function() {
                 $('.calculator .result').hide()
+                $('#calculator').val('')
             })
 
-            if ($('body').width() > 480) {
-                $(window).scroll(function(event){
-                    $('.calculator .result').hide()
-                    $('#calculator').blur()
-                })
-            }
+            // if ($('body').width() > 480) {
+            //     $(window).scroll(function(event){
+            //         $('.calculator .result').hide()
+            //         $('#calculator').blur()
+            //         $('#calculator').val('')
+            //     })
+            // }
         })
     </script>
 </body>
