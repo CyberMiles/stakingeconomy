@@ -40,9 +40,10 @@
                     <div class="name">Estimated Reward Calculator</div>
                     <input id="calculator" type="text" placeholder="Estimated Reward Calculator">
                     <div class="result" style="display: none;">
-                        <p>Estimated monthly CMT Award: <span class="cmtAward"></span> CMTs ≈<span id="month"></span> BTC</p>
-                        <p>Estimated annual CMT Award: <span class="cmtAward"></span> CMTs ≈<span id="mannual"></span> BTC</p>
-                        <img class="close" src="./images/close.png">
+                        <p>Stake <span id="cmtAward"></span> CMTs ≈ <span id="btcCurrency"></span> BTC</p>
+                        <p>Estimated monthly CMT Award: <span id="cmtAwardMon"></span> CMTs ≈<span id="month"></span> BTC</p>
+                        <p>Estimated annual CMT Award: <span id="cmtAwardYear"></span> CMTs ≈<span id="mannual"></span> BTC</p>
+                        <img class="close" src="/images/close.png">
                     </div>
                 </div>
 
@@ -394,6 +395,20 @@
             return Number(s1.replace('.', '')) * Number(s2.replace('.', '')) / Math.pow(10, m)
         }
 
+        function accDiv(arg1, arg2) {
+            var t1 = 0
+            var t2 = 0
+            try {
+                t1 = arg1.toString().split('.')[1].length
+            } catch (e) {}
+            try {
+                t2 = arg2.toString().split('.')[1].length
+            } catch (e) {}
+            var r1 = Number(arg1.toString().replace('.', ''))
+            var r2 = Number(arg2.toString().replace('.', ''))
+            return r1 / r2 * Math.pow(10, t2 - t1)
+        }
+
         $(function() {
             // $('.result').css('bottom', -($('.result').height() + 80))
             $('.youtub').on('hidden.bs.modal', function (e) {
@@ -408,13 +423,19 @@
                 var val = $(e.target).val() || 0
                 var cmt = parseInt(val) > 0 ? parseInt(val) : 0
                 var currency = 0.00000428
-                var mannual = cmt * 0.2 * 0.00000428
+                var btc = cmt * currency
+                var mannual = cmt * 0.2 * currency
                 var month = mannual / 12
 
                 if (cmt !== val) $(this).val(cmt)
-                $('.cmtAward').text(accMul(cmt, 0.2))
+                $('#cmtAward').text(cmt)
+                $('#cmtAwardYear').text(accMul(cmt, 0.2).toFixed(2))
+                $('#cmtAwardMon').text(accDiv(accMul(cmt, 0.2), 12).toFixed(2))
+
+                $('#btcCurrency').text(btc.toFixed(6))
                 $('#month').text(month.toFixed(6))
                 $('#mannual').text(mannual.toFixed(6))
+
                 $('.calculator .result').show()
                 $('.result').css('bottom', -($('.result').height() + 80))
 
