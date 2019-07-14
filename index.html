@@ -46,9 +46,9 @@
                     <div class="name">Estimated Reward Calculator</div>
                     <input id="calculator" type="text" placeholder="Estimated Reward Calculator">
                     <div class="result" style="display: none;">
-                        <p>Stake <span id="cmtAward"></span> CMTs ≈ <span id="btcCurrency"></span> BTC</p>
-                        <p>Estimated monthly CMT Award: <span id="cmtAwardMon"></span> CMTs ≈<span id="month"></span> BTC</p>
-                        <p>Estimated annual CMT Award: <span id="cmtAwardYear"></span> CMTs ≈<span id="mannual"></span> BTC</p>
+                        <p>Stake <span id="cmtAward"></span> CMTs ≈ <span id="btcCurrency"></span> USD</p>
+                        <p>Estimated monthly CMT Award: <span id="cmtAwardMon"></span> CMTs ≈<span id="month"></span> USD</p>
+                        <p>Estimated annual CMT Award: <span id="cmtAwardYear"></span> CMTs ≈<span id="mannual"></span> USD</p>
                         <img class="close" src="./images/close.png">
                     </div>
                 </div>
@@ -305,6 +305,10 @@
                     <a href="https://www.okex.com/lang/en-US/" target="_blank" onClick="gaSend('okex', 'exchange')">Okex</a>
                     <a href="https://www.bithumb.com/" target="_blank" onClick="gaSend('bithumb', 'exchange')">Bithumb</a>
                 </div>
+                <div class="buy row-list float-left">
+                    <span class="name">Contact Us</span>
+                    <a>investment@cybermiles.io</a>
+                </div>
                 <div class="download row-list float-right text-right">
                     <span class="name">Download</span>
                     <a href="https://s3.cn-north-1.amazonaws.com.cn/cmtwallet/android/CMT-Wallet-Android.apk" target="_blank" onClick="gaSend('bottom_ios', 'install')">IOS</a>
@@ -438,7 +442,7 @@
             $('#calculator').on('keyup focus', function(e) {
                 var val = $(e.target).val() || 0
                 var cmt = parseInt(val) > 0 ? parseInt(val) : 0
-                var currency = 0.00000428
+                var currency = 0.0544
                 var btc = cmt * currency
                 var mannual = cmt * 0.2 * currency
                 var month = mannual / 12
@@ -448,9 +452,9 @@
                 $('#cmtAwardYear').text(accMul(cmt, 0.2).toFixed(2))
                 $('#cmtAwardMon').text(accDiv(accMul(cmt, 0.2), 12).toFixed(2))
 
-                $('#btcCurrency').text(btc.toFixed(6))
-                $('#month').text(month.toFixed(6))
-                $('#mannual').text(mannual.toFixed(6))
+                $('#btcCurrency').text(btc.toFixed(2))
+                $('#month').text(month.toFixed(2))
+                $('#mannual').text(mannual.toFixed(2))
 
                 $('.calculator .result').show()
                 $('.result').css('bottom', -($('.result').height() + 80))
