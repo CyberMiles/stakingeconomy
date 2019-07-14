@@ -65,6 +65,12 @@ body {
 .hide {
   display: none;
 }
+.m-show {
+  display: none;
+}
+.m-hide {
+  display: block;
+}
 .wallet-down-container a:hover {
   text-decoration: none;
 }
@@ -145,12 +151,13 @@ body {
   margin-top: 80px;
   color: rgba(255, 255, 255, 0.5);
 }
-.wallet-down-container header .main .download {
+.wallet-down-container header .download {
   margin-top: 30px;
 }
-.wallet-down-container header .main .download a {
+.wallet-down-container header .download a {
   height: 46px;
   width: 167px;
+  margin-bottom: 15px;
 }
 .wallet-down-container section {
   padding: 60px 0;
@@ -504,26 +511,14 @@ body {
   .container {
     max-width: 96%;
   }
+  .wallet-down-container header {
+    background-size: cover, cover;
+  }
   .wallet-down-container header .main {
     padding-right: 0;
   }
   .wallet-down-container header .main .logo {
     height: 60px;
-  }
-  .wallet-down-container header .side {
-    display: none;
-    padding-top: 10px;
-    text-align: left;
-  }
-  .wallet-down-container header .side .title {
-    font-size: 16px;
-  }
-  .wallet-down-container header .side .price {
-    font-size: 28px;
-    margin-bottom: 1px;
-  }
-  .wallet-down-container header .side .sub-price {
-    font-size: 21px;
   }
   .wallet-down-container section {
     padding: 30px 0;
@@ -559,15 +554,19 @@ body {
   .modal-dialog {
     margin: 45px;
   }
-  .wallet-down-container header {
-    background-size: cover, cover;
+  .m-show {
+    display: block;
+  }
+  .m-hide {
+    display: none;
   }
   .wallet-down-container header .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 30px;
   }
   .wallet-down-container header .main {
-    padding-bottom: 40px;
+    padding-bottom: 5px;
   }
   .wallet-down-container header .main .logo {
     height: 60px;
@@ -588,12 +587,26 @@ body {
     font-size: 18px;
     line-height: 30px;
   }
-  .wallet-down-container header .main .download {
+  .wallet-down-container header .download {
     margin-top: 20px;
   }
-  .wallet-down-container header .main .download a {
+  .wallet-down-container header .download a {
     height: 45px;
     width: 47%;
+  }
+  .wallet-down-container header .side {
+    padding-top: 10px;
+    text-align: left;
+  }
+  .wallet-down-container header .side .title {
+    font-size: 16px;
+  }
+  .wallet-down-container header .side .price {
+    font-size: 28px;
+    margin-bottom: 1px;
+  }
+  .wallet-down-container header .side .sub-price {
+    font-size: 21px;
   }
   .wallet-down-container section {
     padding: 25px 0;
