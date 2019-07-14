@@ -21,16 +21,22 @@
                 <div class="main">
                     <a href="https://cybermiles.io/" target="_blank"><img class="logo" src="./images/logo.png"></a>
 
-                    <h3 class="title">CMT is where Bitcoin meets Amazon.</h3>
-                    <h4 class="title-2">Convert your BTCs into CMTs to Get More Income!<br>The annual return of CMT staking can be up to 20%.</h4>
-                    <p class="title-3">Stake 1,000,000 CMTs (4.28 BTC) via the CyberMiles App, then get the additional award of up to 200,000CMTs (0.856 BTC).</p>
+                    <h3 class="title">CMT is Where Bitcoin Meets Amazon</h3>
+                    <h4 class="title-2">The Annual Return of CMT Staking <br>Can Be Up To 20%<br>Stake CMT Now and Get More Income</h4>
                     <p class="title-4">Download the free mobile app to stake your CMTs.</p>
                     <div class="download">
                         <a href="https://play.google.com/store/apps/details?id=io.cybermiles.cmtwallet" class="google" target="_blank" onClick="gaSend('top_android', 'install')"></a>
                         <a href="https://itunes.apple.com/us/app/id1418378426" class="apple" target="_blank" onClick="gaSend('top_ios', 'install')"></a>
                     </div>
                 </div>
-                <div class="side"></div>
+                <div class="side">
+                    <p class="title">Total Staked CMTs</p>
+                    <p class="price"><span id="stakedCmt">251,681,555</span> CMTs</p>
+                    <p class="sub-price">≈$<span id="stakedUsd">13,691,477</span> USD</p>
+                    <p class="title">Total Staking Awards</p>
+                    <p class="price"><span id="stakingCmt">52,695,832</span> CMTs</p>
+                    <p class="sub-price">≈$<span id="stakingUsd">2,866,653</span> USD</p>
+                </div>
             </div>
         </header>
 
@@ -43,7 +49,7 @@
                         <p>Stake <span id="cmtAward"></span> CMTs ≈ <span id="btcCurrency"></span> BTC</p>
                         <p>Estimated monthly CMT Award: <span id="cmtAwardMon"></span> CMTs ≈<span id="month"></span> BTC</p>
                         <p>Estimated annual CMT Award: <span id="cmtAwardYear"></span> CMTs ≈<span id="mannual"></span> BTC</p>
-                        <img class="close" src="/images/close.png">
+                        <img class="close" src="./images/close.png">
                     </div>
                 </div>
 
@@ -62,8 +68,17 @@
             </div>
         </section>
 
+        <section class="bg-gray youtube">
+            <div class="container">
+                <div class="title">Validators champion e-commerce powered by blockchain</div>
+                <div class="youtube-container">
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/oxuWsOUMmHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
         <!-- table -->
-        <section class="bg-gray table-show">
+        <section class="table-show">
             <div class="container">
                 <div class="title">CMT May Be The Best Choice For Staking</div>
                 <p>Though there are so many projects support staking</p>
@@ -191,7 +206,7 @@
         </section>
 
         <!-- Economy -->
-        <section class="economy">
+        <section class="bg-gray economy">
             <div class="container">
                 <div class="title">What is Staking Economy?</div>
                 <p>Staking is an economic incentive cryptocurrency projects provide for token holders to participate in community governance and security. Users stake (or lock) tokens to “vote” for representatives (eg super nodes) that govern the blockchain ecosystem.</p>
@@ -199,7 +214,7 @@
             </div>
         </section>
 
-        <section class="bg-gray stakeInfo">
+        <section class="stakeInfo">
             <div class="container">
                 <div class="title">How To Stake CMTs？</div>
                 <p class="info">For now, 3195 CMT addresses and their 254,708,230 CMTs has been staked to 19 validators and 5 backup validators on the CyberMiles blockchain.</p>
@@ -226,7 +241,7 @@
             </div>
         </section>
 
-        <section class="stakecCmt">
+        <section class="bg-gray stakecCmt">
             <div class="container flex">
                 <div class="block-left">
                     <div class="title">How To Stake CMTs In <br>CyberMiles App</div>
@@ -243,7 +258,7 @@
             </div>
         </section>
 
-        <section class="bg-gray contact hide">
+        <section class="contact hide">
             <div class="container">
                 <p>CyberMiles (CMT) is world's No.1 blockchain platform for e-commerce.</p>
                 <p>The current market cap of Amzon is 954.63B, while CyberMiles' is $58,509,942 USD.</p>
@@ -252,7 +267,7 @@
             </div>
         </section>
 
-        <section class="bg-gray partner">
+        <section class="partner">
             <div class="container">
                 <div class="title">Partners And Validators</div>
                 <div class="img-container">
@@ -311,6 +326,7 @@
 
     <!-- CMT_SCRIPTS -->
     <script src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./js/countUp.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <!-- CMT_SCRIPTS END -->
@@ -454,6 +470,45 @@
             //         $('#calculator').val('')
             //     })
             // }
+
+            var start = 1563093379
+            var div = (+new Date() / 1000 - start) * 2.3
+            var usdCurrency = 0.0544
+            var stakedCmt = 251681555 + div
+            var stakingCmt = 52695832 + div
+            var stakedUsd = stakedCmt * usdCurrency
+            var stakingUsd = stakingCmt * usdCurrency
+            var stakedAnim = new CountUp("stakedCmt", stakedCmt - 10, {startVal: stakedCmt - 456, duration: 2.2});
+            var stakedUsdAnim = new CountUp("stakedUsd", stakedUsd - 10, {startVal: stakedUsd - 456, duration: 2.2});
+            var stakingAnim = new CountUp("stakingCmt", stakingCmt - 10, {startVal: stakingCmt - 456, duration: 2.2});
+            var stakingUsdAnim = new CountUp("stakingUsd", stakingUsd - 10, {startVal: stakingUsd - 456, duration: 2.2});
+            stakedAnim.start(function() {
+                stakedAnim.update(stakedCmt);
+            });
+            stakedUsdAnim.start(function() {
+                stakedUsdAnim.update(stakedUsd);
+            });
+            stakingAnim.start(function() {
+                stakingAnim.update(stakingCmt);
+            });
+            stakingUsdAnim.start(function() {
+                stakingUsdAnim.update(stakingUsd);
+            });
+
+            setTimeout(function() {
+                setInterval(function() {
+                    div = (+new Date() / 1000 - start) * 2.3
+                    stakedCmt = 251681555 + div
+                    stakedUsd = stakedCmt * usdCurrency
+                    stakingCmt = 52695832 + div
+                    stakingUsd = stakingCmt * usdCurrency
+
+                    stakedAnim.update(stakedCmt)
+                    stakedUsdAnim.update(stakedUsd)
+                    stakingAnim.update(stakingCmt)
+                    stakingUsdAnim.update(stakingUsd)
+                }, 1000)
+            }, 4000)
         })
     </script>
 </body>

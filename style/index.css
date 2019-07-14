@@ -93,33 +93,43 @@ body {
 }
 .wallet-down-container header .container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .wallet-down-container header .logo {
   height: 99px;
   margin: 49px 0 49px;
 }
 .wallet-down-container header .side {
-  width: 306px;
-  height: 487px;
-  background-image: url('../images/header_phone.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-top: 30px;
-  position: absolute;
-  right: 0;
-  bottom: -20px;
+  padding-top: 199px;
+  text-align: right;
+}
+.wallet-down-container header .side .title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.wallet-down-container header .side .price {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: -7px;
+}
+.wallet-down-container header .side .sub-price {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 38px;
 }
 .wallet-down-container header .main {
-  width: 100%;
-  padding-right: 334px;
   padding-bottom: 80px;
 }
 .wallet-down-container header .main h3 {
-  font-size: 40px;
+  font-size: 38px;
   line-height: 54px;
+  margin-bottom: 26px;
 }
 .wallet-down-container header .main h4 {
   font-size: 29px;
@@ -132,15 +142,15 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 .wallet-down-container header .main .title-4 {
-  margin-top: 50px;
+  margin-top: 80px;
   color: rgba(255, 255, 255, 0.5);
 }
 .wallet-down-container header .main .download {
   margin-top: 30px;
 }
 .wallet-down-container header .main .download a {
-  height: 44px;
-  width: 170px;
+  height: 46px;
+  width: 167px;
 }
 .wallet-down-container section {
   padding: 60px 0;
@@ -150,6 +160,10 @@ body {
 }
 .wallet-down-container section.economy {
   padding: 80px 0 30px;
+}
+.wallet-down-container section.youtube .youtube-container {
+  max-width: 800px;
+  margin: 50px auto 0;
 }
 .wallet-down-container section .title {
   font-size: 38px;
@@ -435,6 +449,7 @@ body {
   padding: 60px 0;
   font-size: 14px;
   overflow: hidden;
+  background-color: #fafafa;
 }
 .wallet-down-container footer .logo {
   width: 144px;
