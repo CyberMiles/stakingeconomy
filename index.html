@@ -241,7 +241,7 @@
                     <a href="https://www.bithumb.com/" target="_blank" class="bithumb" onClick="gaSend('bithumb', 'exchange')"></a>
                 </div>
 
-                <p class="desc">You need to own at least 1,000 CMTs. The price of CMT, for now, is $0.03 USD, <br>$40 USD is enough to get more money.<br> For more information, you can visit <a href="https://www.cybermiles.io/en-us/cmt/whitepaper/" target="_blank"  onClick="gaSend('visit_whitepaper', 'whitepaper')">the CyberMiles DPoS White Paper</a></p>
+                <p class="desc">You need to own at least 1,000 CMTs. <br> For more information, you can visit <a href="https://www.cybermiles.io/en-us/cmt/whitepaper/" target="_blank"  onClick="gaSend('visit_whitepaper', 'whitepaper')">the CyberMiles DPoS White Paper</a></p>
             </div>
         </section>
 
@@ -446,7 +446,7 @@
             $('#calculator').on('keyup focus', function(e) {
                 var val = $(e.target).val() || 0
                 var cmt = parseInt(val) > 0 ? parseInt(val) : 0
-                var currency = 0.0544
+                var currency = 0.0307
                 var btc = cmt * currency
                 var mannual = cmt * 0.2 * currency
                 var month = mannual / 12
@@ -481,7 +481,7 @@
 
             var start = 1563093379
             var div = (+new Date() / 1000 - start) * 2.3
-            var usdCurrency = 0.0544
+            var usdCurrency = 0.0307
             var stakedCmt = 251681555 + div
             var stakingCmt = 52695832 + div
             var stakedUsd = stakedCmt * usdCurrency
