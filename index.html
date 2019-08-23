@@ -355,6 +355,7 @@
     <script>
         var width = $('body').width()
         var height = 738
+        var excRate = 0.0307
 
         if (width < 425) {
             height = (width - 90) * (740 / 436)
@@ -446,9 +447,8 @@
             $('#calculator').on('keyup focus', function(e) {
                 var val = $(e.target).val() || 0
                 var cmt = parseInt(val) > 0 ? parseInt(val) : 0
-                var currency = 0.0307
-                var btc = cmt * currency
-                var mannual = cmt * 0.2 * currency
+                var btc = cmt * excRate
+                var mannual = cmt * 0.2 * excRate
                 var month = mannual / 12
 
                 if (cmt !== val) $(this).val(cmt)
@@ -481,11 +481,10 @@
 
             var start = 1563093379
             var div = (+new Date() / 1000 - start) * 2.3
-            var usdCurrency = 0.0307
             var stakedCmt = 251681555 + div
             var stakingCmt = 52695832 + div
-            var stakedUsd = stakedCmt * usdCurrency
-            var stakingUsd = stakingCmt * usdCurrency
+            var stakedUsd = stakedCmt * excRate
+            var stakingUsd = stakingCmt * excRate
             var stakedAnim = new CountUp("stakedCmt", stakedCmt - 10, {startVal: stakedCmt - 456, duration: 2.2});
             var stakedUsdAnim = new CountUp("stakedUsd", stakedUsd - 10, {startVal: stakedUsd - 456, duration: 2.2});
             var stakingAnim = new CountUp("stakingCmt", stakingCmt - 10, {startVal: stakingCmt - 456, duration: 2.2});
@@ -507,9 +506,9 @@
                 setInterval(function() {
                     div = (+new Date() / 1000 - start) * 2.3
                     stakedCmt = 251681555 + div
-                    stakedUsd = stakedCmt * usdCurrency
+                    stakedUsd = stakedCmt * excRate
                     stakingCmt = 52695832 + div
-                    stakingUsd = stakingCmt * usdCurrency
+                    stakingUsd = stakingCmt * excRate
 
                     stakedAnim.update(stakedCmt)
                     stakedUsdAnim.update(stakedUsd)
